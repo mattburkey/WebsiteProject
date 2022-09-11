@@ -1,0 +1,14 @@
+<%- include('../partials/header.ejs')%>
+<h1>Welcome to the connections page!</h1>
+<h2>See our current connection events below.</h2>
+<div class = "content">
+    <%if(connections.length) {%>
+        <%connections.forEach(connection=>{%>
+            <h4><%= connection.topic%></h4>
+            <a href = "/connections/<%= connection.id%>"><p><%= connection.name%></p></a>
+       <% });
+    } else {%>
+        <p>There are no connections to display.</p>
+    <%}%>
+</div>
+<%- include('../partials/footer.ejs')%>

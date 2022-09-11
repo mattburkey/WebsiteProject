@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beer with the Boys</title>
+    <link rel="stylesheet" href="/css/index.css"> 
+    <meta charset="UTF-8"> 
+</head>
+
+<body>
+<header>
+<div>
+    <a href="/"><img src="/images/logo.png" alt="logo" id="logo"></a>   
+</div>
+<nav> 
+    <ul id="headerlist">
+
+
+            <li>
+                <a href='/connections/new'>Create Connection</a>
+            </li>
+        <%if(!user) {%>
+        <li>
+            <a href='/users/login'>Login</a>
+        </li>
+        <li>
+            <a href='/users/new'>Sign up</a>
+        </li>
+        <%} else {%>
+        <li>
+            <a href='/users/profile'>Profile</a>
+        </li>
+        <li>
+            <a href='/users/logout'>Logout</a>
+        </li>
+        <%}%>
+    </ul>
+</nav>
+<hr>
+<div id ="connections"> 
+    <a href="/connections"><button class="button">Connections</button></a>
+</div>
+</header>
+
+<% if(errorMessages.length > 0) {%>
+    <% errorMessages.forEach(message=>{%>
+        <div class='error'>
+            <%=message%>
+        </div>
+        <%});%>
+            <%}%>
+
+                <% if(successMessages.length > 0) {%>
+
+                    <% successMessages.forEach(message=>{%>
+                        <div class='success'>
+                            <%=message%>
+                        </div>
+                        <%});%>
+                            <%}%>

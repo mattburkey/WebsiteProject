@@ -1,0 +1,28 @@
+<%- include('../partials/header.ejs')%>
+<div class = "content">
+    <h2>Edit for <%= connection.name%></h2>
+    <form method = "POST" action = "/connections/<%= connection.id%>?_method=PUT">
+        <table>
+            <tr>
+                <td><label for="date" >Date:</label></td>
+                <td><input type="text" id="date" name="date" value = "<%= connection.date%>" class = "fixed-width" required></td>
+            </tr>
+            <tr><td class = "align-top"><label for="details">Details:</label></td>
+                <td><textarea rows="5" id="details" name="details" class = "fixed-width" required minLength="10"><%= connection.details%></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="start" >Start Time:</label></td>
+                <td><input type="text" id="start" name="start" value = "<%= connection.start%>" class = "fixed-width" required></td>
+            </tr>
+            <tr>
+                <td><label for="end" >End Time:</label></td>
+                <td><input type="text" id="end" name="end" value = "<%= connection.end%>" class = "fixed-width" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" class = "align-right"><button>Submit</button></td>
+            </tr>
+            </table>        
+    </form>
+
+    </div>
+    <%- include('../partials/footer.ejs')%>

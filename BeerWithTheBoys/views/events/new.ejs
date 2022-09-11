@@ -1,0 +1,41 @@
+<%- include('../partials/header.ejs')%>
+<div class = "content">
+    <form action = '/connections' method = 'POST'>
+        <table>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" id="name" name="name" class = "fixed-width" required></td>
+            </tr>
+            <tr>
+                <td><label for="topic">Topic</label></td>
+                <td><input type="text" id="topic" name="topic" class = "fixed-width" required></td>
+            </tr>
+            <tr>
+                <td class = "align-top"><label for="details">Details</label></td>
+                <td><textarea rows="5" id="details" name="details" class = "fixed-width" required minLength="10"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="date">Date</label></td>
+                <td><input type="text" id="date" name="date" class = "fixed-width" required></td>
+            </tr>
+            <tr>
+                <td><label for="start">Start Time</label></td>
+                <td><input type="text" id="start" name="start" class = "fixed-width" required></td>
+            </tr>
+            <tr>
+                <td><label for="end">End Time</label></td>
+                <td><input type="text" id="end" name="end" class = "fixed-width" required></td>
+            </tr>
+            <tr>
+                <td><label for="image">Image</label></td>
+                <td><input type="text" id="image" name="image" class = "fixed-width" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" class = "align-right"><button>Submit</button></td>
+            </tr>
+        </table>        
+    </form>
+
+    </div>
+
+<%- include('../partials/footer.ejs')%>
